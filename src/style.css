@@ -3,3 +3,43 @@
     transition: none;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+}
+header {
+  margin: 15px;
+  text-align: center;
+}
+.profile-card {
+  position: relative;
+}
+main {
+  margin: 10px;
+}
+footer {
+}
+.profile-card > img {
+  width: 100%;
+}
+.profile-card > h1 {
+  font-size: 50px;
+  position: absolute; /* Position the h1 absolutely to overlay on the image */
+  top: 80%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset the h1 by its own dimensions */
+  color: white; /* Assuming you want white text */
+  /* Add any additional styling here */
+}

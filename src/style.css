@@ -31,6 +31,7 @@ main {
 }
 footer {
 }
+/* TODO find a way to properly display header on image on mobile */
 .profile-card > img {
   width: 100%;
 }

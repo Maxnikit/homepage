@@ -97,8 +97,10 @@ main {
 .card {
   overflow: hidden;
   width: 100%;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  box-shadow: 5px 5px 10px 0 rgba(0 0 0/ 10%);
+
+  /* border-radius: 5px; */
 }
 
 .card-body {
@@ -135,6 +137,7 @@ main {
 }
 
 footer {
+  margin-top: 10rem;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -144,7 +147,6 @@ footer {
 }
 
 .footer-title {
-  margin: 0;
   margin-bottom: 0;
 }
 
@@ -152,7 +154,7 @@ footer {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
 .footer-description:nth-of-type(3) {

@@ -28,6 +28,8 @@ body {
   min-height: 100%;
   font-size: 1.6rem;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -60,7 +62,7 @@ h3 {
   font-size: 2.5rem;
 }
 
-header {
+.about {
   padding: 15px;
 
   /* background: linear-gradient(
@@ -73,6 +75,7 @@ header {
   background-image: linear-gradient(335deg, white 49.9%, #1e90ff 50%);
   text-align: center;
 }
+
 a > img {
   width: 3rem;
   height: 3rem;
@@ -83,29 +86,38 @@ a > img {
   padding: 10px 10px 0;
 }
 
-main {
-  margin: 20px;
+.about {
+  height: 100%;
+  padding-bottom: 10rem;
+}
+
+.projects {
+  height: 100%;
 }
 
 .card-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 50px;
+  height: 100%;
 }
 
 .card {
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* max-width: 100%; */
+  /* width: 30rem; */
   width: 100%;
-  /* border: 1px solid black; */
+  height: 50rem;
   box-shadow: 5px 5px 10px 0 rgba(0 0 0/ 10%);
-
-  /* border-radius: 5px; */
 }
 
 .card-body {
   padding: 0.2rem 2rem;
   margin-bottom: 2rem;
+  height: 45%;
 }
 
 .card-link {
@@ -121,7 +133,8 @@ main {
 .card > img {
   display: block;
   width: 100%;
-
+  height: 55%;
+  object-fit: cover;
   /* height: 100%; */
 }
 
@@ -137,7 +150,6 @@ main {
 }
 
 footer {
-  margin-top: 10rem;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -188,7 +200,7 @@ footer {
 /* TODO find a way to properly display header on image on mobile */
 
 .profile-card > img {
-  width: 100%;
+  width: 500px;
   height: 500px;
   box-shadow: 5px 5px 10px 0 rgb(54 49 49 / 75%);
   object-fit: cover;
@@ -206,4 +218,70 @@ footer {
 .footer-link > img {
   width: 3rem;
   height: 3rem;
+}
+
+/* Tablet */
+@media (width >= 768px) {
+  .about {
+    padding-inline: 5%;
+  }
+  .projects {
+    padding-inline: 5%;
+  }
+  footer {
+    padding-inline: 5%;
+  }
+  .profile-card {
+    padding: 0;
+    width: 100%;
+  }
+
+  .profile-card > img {
+    width: 45%;
+    float: left;
+
+    margin-top: -30px;
+    margin-left: 30px;
+
+    margin-right: 20px;
+  }
+  .profile-card > h1 {
+    width: 100%;
+    left: 70%;
+  }
+  .about > div.links-container {
+    display: none;
+  }
+
+  .profile-description {
+    margin-inline: auto;
+    padding: 0;
+    height: 400px;
+    width: 80%;
+    margin-top: 70px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0 rgba(0 0 0/ 10%);
+  }
+
+  .card {
+    width: 40%;
+  }
+}
+
+/* Desktop */
+@media (width >= 1024px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-container {
+    justify-content: flex-start;
+  }
+  .projects > h2 {
+    text-align: left;
+  }
+
+  .card {
+    max-width: 30%;
+  }
 }
